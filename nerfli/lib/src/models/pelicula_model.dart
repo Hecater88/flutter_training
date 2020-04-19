@@ -63,5 +63,12 @@ class Pelicula {
     overview         = json['overview'];
     releaseDate      = json['release_date'];
   }
+  
+  getPosterImg(){
+    if(posterPath == null){
+      return 'https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png';
+    }
+    return 'https://image.tmdb.org/t/p/w500/$posterPath';
+  }
 }
 
